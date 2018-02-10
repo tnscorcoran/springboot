@@ -4,6 +4,7 @@ public class Greeting {
 
     private final long id;
     private final String content;
+    private String description = "Demo: Spring Boot on OCP - 11 Feb 2018";
 
     public Greeting(long id, String content) {
         this.id = id;
@@ -17,4 +18,12 @@ public class Greeting {
     public String getContent() {
         return content;
     }
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }
