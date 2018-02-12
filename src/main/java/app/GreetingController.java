@@ -64,8 +64,6 @@ public class GreetingController {
         }
         
         System.out.println("f::AbsolutePath is "+ f.getAbsolutePath());
-        System.out.println("OPENSHIFT_DATA_DIR:"+System.getenv("OPENSHIFT_DATA_DIR"));
-
         try {
             
         	// Write to file
