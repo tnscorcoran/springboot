@@ -62,6 +62,9 @@ public class GreetingController {
 				}
         		
         }
+        else {
+        		System.out.println(" FILE EXISTS ");
+        }
         
         System.out.println("AbsolutePath is "+ f.getAbsolutePath());
         try {
