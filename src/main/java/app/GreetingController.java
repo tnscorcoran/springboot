@@ -63,7 +63,7 @@ public class GreetingController {
         		
         }
         
-        System.out.println("f::AbsolutePath is "+ f.getAbsolutePath());
+        System.out.println("AbsolutePath is "+ f.getAbsolutePath());
         try {
             
         	// Write to file
