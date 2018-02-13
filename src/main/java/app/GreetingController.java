@@ -46,10 +46,10 @@ public class GreetingController {
         String line = null;
 
         
-        String lyrics = "I, I will be king And you, you will be queen Though nothing, will drive them away We can beat them, just for one day We can be heroes, just for one day And you, you can be mean And I, I'll drink all the time 'Cause we're lovers, and that is a fact Yes we're lovers, and that is that";
+        String lyrics = "I, I will be king And you, you will be queen Though nothing, will drive them away We can beat them, just for one day We can be heroes, just for one day And you, you can be mean And I, I'll drink all the time";
         
         
-        String fileNameAndPath =  "temp.txt";
+        String fileNameAndPath =  "/opt/app-root/src/main/resources/temp.txt";
         File f = new File(fileNameAndPath);
 
         if (!f.exists()) {
