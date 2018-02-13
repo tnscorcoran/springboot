@@ -46,7 +46,7 @@ public class GreetingController {
         String line = null;
 
         
-        String lyrics = "I - I will be king And you, you will be queen Though nothing, will drive them away We can beat them, just for one day We can be heroes, just for one day And you, you can be mean And I, I'll drink all the time";
+        String lyrics = "I, I will be king And you, you will be queen Though nothing, will drive them away We can beat them, just for one day We can be heroes, just for one day And you, you can be mean And I, I'll drink all the time";
         
         
         String fileNameAndPath =  "/opt/app-root/src/main/resources/temp.txt";
