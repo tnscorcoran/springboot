@@ -49,7 +49,7 @@ public class GreetingController {
         String lyrics = "I, I will be king And you, you will be queen Though nothing, will drive them away We can beat them, just for one day We can be heroes, just for one day And you, you can be mean And I, I'll drink all the time";
         
         
-        String fileNameAndPath =  "/opt/app-root/src/temp.txt";
+        String fileNameAndPath =  "/opt/app-root/src/data/temp.txt";
         File f = new File(fileNameAndPath);
 
         if (!f.exists()) {
