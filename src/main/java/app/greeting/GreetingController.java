@@ -1,4 +1,4 @@
-package app;
+package app.greeting;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

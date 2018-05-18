@@ -1,4 +1,4 @@
-package app;
+package app.flights;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
