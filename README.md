@@ -1,4 +1,5 @@
 To run this in Openshift (substitute as appropriate):
+
 oc login -u developer -p developer --insecure-skip-tls-verify=true 
 oc new-project springboot
 oc new-app openshift/redhat-openjdk18-openshift:1.3~https://github.com/tnscorcoran/springboot.git
