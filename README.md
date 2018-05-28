@@ -1,4 +1,5 @@
-To run this in Openshift (substitute as appropriate):
+To run on Openshift(substitute as appropriate):
+-----------------------------------------------
 
 oc login -u developer -p developer --insecure-skip-tls-verify=true 
 
