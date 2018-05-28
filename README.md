@@ -10,7 +10,7 @@ oc expose service springboot
 
 Now, once the build and deployment are done, it’s available to test:
 
-curl <route>/flights/intl/flights
+curl route/flights/intl/flights
 
 in my case:
 
