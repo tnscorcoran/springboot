@@ -34,11 +34,19 @@ public class GreetingController {
 	    
 	    	Map<String, String> env = System.getenv();
 	        System.out.println("TOM'S SECRET:"+env.get("TOM_SECRET"));
-	        System.out.println("*********** PV 1 ************");
+	    
+	        for (String envName : env.keySet()) {
+                System.out.format("%s=%s%n",
+                              envName,
+                              env.get(envName));
+	    
+			
+		// RESTORE THIS	
+	        //System.out.println("*********** PV 1 ************");
 	    		    	
-	    	readWriteFile();
+	    	//readWriteFile();
 	 
-	    	System.out.println("*********** PV 2 ************");
+	    	//System.out.println("*********** PV 2 ************");
     		
     	
     		return new Greeting(counter.incrementAndGet(),
