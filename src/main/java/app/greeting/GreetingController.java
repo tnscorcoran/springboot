@@ -39,7 +39,7 @@ public class GreetingController {
                 System.out.format("%s=%s%n",
                               envName,
                               env.get(envName));
-	    
+	        }
 			
 		// RESTORE THIS	
 	        //System.out.println("*********** PV 1 ************");
