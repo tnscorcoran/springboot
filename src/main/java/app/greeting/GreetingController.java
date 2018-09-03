@@ -28,8 +28,13 @@ public class GreetingController {
     @RequestMapping("/greetingpv")
     public Greeting greetingpv(@RequestParam(value="name", defaultValue="World") String name) {
         
-	    	System.out.println("*********** PV 1 ************");
-	    	
+	    	System.out.println("*********** PV 0 ************");
+	    
+	    
+	    	Map<String, String> env = System.getenv();
+	        System.out.println("TOM'S SECRET:"+env.get("TOM_SECRET"));
+	        System.out.println("*********** PV 1 ************");
+	    		    	
 	    	readWriteFile();
 	 
 	    	System.out.println("*********** PV 2 ************");
