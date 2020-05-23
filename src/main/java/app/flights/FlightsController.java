@@ -22,13 +22,13 @@ public class FlightsController {
 			super();
 			flights = new ArrayList<Flight>();
 			
-			Flight flight1 = new Flight(""+maxFlight++, "910", "EWR", "HKG", "01/01/2020 20.40", "CX");
+			Flight flight1 = new Flight("***V1*** - "+maxFlight++, "910", "EWR", "HKG", "01/01/2020 20.40", "CX");
 			flights.add(flight1);
 			
-			Flight flight2 = new Flight(""+maxFlight++, "870", "SFO", "PVG", "11/01/2020 22.10", "CX");
+			Flight flight2 = new Flight("***V1*** - "+maxFlight++, "870", "SFO", "PVG", "11/01/2020 22.10", "CX");
 			flights.add(flight2);
 			
-			Flight flight3 = new Flight(""+maxFlight++, "489", "LAX", "PEK", "01/01/2020 12.25", "CX");
+			Flight flight3 = new Flight("***V1*** - "+maxFlight++, "489", "LAX", "PEK", "01/01/2020 12.25", "CX");
 			flights.add(flight3);
 		}		
 
