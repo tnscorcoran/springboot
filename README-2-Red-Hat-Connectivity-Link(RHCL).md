@@ -54,3 +54,39 @@ spec:
   type: ClusterIP
 EOF
 ```
+
+### Deploy Flights API
+
+Create an HTTPRoute for your Gateway by running the following command:
+
+```
+oc apply -f -<<EOF
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+ name: springboot-http-route
+ namespace: a-springboot
+spec:
+ hostnames:
+   - springboot.managed.sandbox1237.opentlc.com
+ parentRefs:
+   - group: gateway.networking.k8s.io
+     kind: Gateway
+     name: external
+     namespace: api-gateway
+ rules:
+   - backendRefs:
+       - group: ''
+         kind: Service
+         name: springboot-flights
+         port: 80
+         weight: 1
+     matches:
+       - method: GET
+         path:
+           type: PathPrefix
+           value: /flights/intl/flights
+EOF
+```
+
+
