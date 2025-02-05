@@ -55,9 +55,9 @@ spec:
 EOF
 ```
 
-### Deploy Flights API
+### Create an HTTPRoute for your Gateway
 
-Create an HTTPRoute for your Gateway by running the following command:
+Create an HTTPRoute for your previously created Gateway by running the following command:
 
 ```
 oc apply -f -<<EOF
