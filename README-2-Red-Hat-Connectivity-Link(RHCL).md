@@ -57,7 +57,7 @@ EOF
 
 ### Create an HTTPRoute for your Gateway
 
-Create an HTTPRoute for your previously created Gateway by running this command:
+Create an HTTPRoute for your previously created Gateway by running this command (correct your hostname):
 
 ```
 oc apply -f -<<EOF
