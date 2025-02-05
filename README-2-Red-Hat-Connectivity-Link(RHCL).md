@@ -16,7 +16,6 @@ oc login <TOKEN>
 Run the following
 
 ```
-oc login <TOKEN>
 oc new-project a-springboot
 
 oc apply -f - <<EOF
