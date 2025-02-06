@@ -64,7 +64,7 @@ oc apply -f -<<EOF
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
- name: springboot-http-route
+ name: springboot-flights-http-route
  namespace: a-springboot
 spec:
  hostnames:
@@ -93,3 +93,37 @@ Verify
 ```
 oc get httproute -n a-springboot
 ```
+You should see it has been installed
+
+
+### Securing the Flights Application with Connectivity Link Policies
+
+
+#### Create AuthPolicy
+
+oc apply -f -<<EOF
+apiVersion: kuadrant.io/v1
+kind: AuthPolicy
+metadata:
+ name: springboot-flights-authn
+ namespace: a-springboot
+spec:
+ targetRef:
+   group: gateway.networking.k8s.io
+   kind: HTTPRoute
+   name: springboot-flights-http-route
+ defaults:
+   strategy: merge
+   rules:
+     authentication:
+       "api-key-authn":
+         apiKey:
+           selector:
+             matchLabels:
+               app: springboot-flights
+         credentials:
+           authorizationHeader:
+             prefix: APIKEY
+EOF
+
+
