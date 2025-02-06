@@ -105,28 +105,28 @@ oc apply -f -<<EOF
 apiVersion: kuadrant.io/v1
 kind: AuthPolicy
 metadata:
- name: springboot-flights-authn
- namespace: a-springboot
+  name: springboot-flights-authn
+  namespace: a-springboot
 spec:
- targetRef:
-   group: gateway.networking.k8s.io
-   kind: HTTPRoute
-   name: springboot-flights-http-route
- defaults:
-   strategy: merge
-   rules:
-     authentication:
-       "api-key-authn":
-         apiKey:
-           secretRef: # Add this!
-             name: api-key-regular-user
-             namespace: kuadrant-system # Specify the namespace         
-           selector:
-             matchLabels:
-               app: springboot-flights
-         credentials:
-           authorizationHeader:
-             prefix: APIKEY
+  targetRef:
+    group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    name: springboot-flights-http-route
+  defaults:
+    strategy: merge
+    rules:
+      authentication:
+        "api-key-authn":
+          apiKey:
+            secretRef: # Add this!
+              name: api-key-regular-user
+              namespace: kuadrant-system # Specify the namespace
+            selector:
+              matchLabels:
+                app: springboot-flights
+          credentials:
+            authorizationHeader:
+              prefix: APIKEY
 EOF
 ```
 
