@@ -127,5 +127,25 @@ spec:
 EOF
 ```
 
+#### Create secret for Authenticating using API_KEY
+```
+oc apply -f -<<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+ name: api-key-regular-user
+ namespace: kuadrant-system
+ labels:
+   authorino.kuadrant.io/managed-by: authorino
+   app: springboot-flights
+stringData:
+ api_key: iamaregularuser
+type: Opaque
+EOF
+```
+
+
+
+
 
 
