@@ -100,7 +100,7 @@ You should see it has been installed
 
 
 #### Create AuthPolicy
-
+```
 oc apply -f -<<EOF
 apiVersion: kuadrant.io/v1
 kind: AuthPolicy
@@ -125,5 +125,7 @@ spec:
            authorizationHeader:
              prefix: APIKEY
 EOF
+```
+
 
 
