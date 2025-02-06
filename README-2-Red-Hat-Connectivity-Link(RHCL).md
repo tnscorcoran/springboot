@@ -134,7 +134,7 @@ apiVersion: v1
 kind: Secret
 metadata:
  name: api-key-regular-user
- namespace: kuadrant-system
+ namespace: a-springboot
  labels:
    authorino.kuadrant.io/managed-by: authorino
    app: springboot-flights
