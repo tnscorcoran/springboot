@@ -146,6 +146,10 @@ EOF
 
 
 
+#### Test the HTTP Route
 
+Test /test endpoint without APIKey:
 
-
+```
+curl -k -w "%{http_code}" https://springboot.managed.sandbox1237.opentlc.com/flights/intl/flights -i
+```
