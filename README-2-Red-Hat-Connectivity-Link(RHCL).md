@@ -89,4 +89,7 @@ spec:
 EOF
 ```
 
-
+Verify
+```
+oc get httproute -n a-springboot
+```
