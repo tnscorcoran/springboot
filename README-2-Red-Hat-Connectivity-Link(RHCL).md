@@ -118,6 +118,9 @@ spec:
      authentication:
        "api-key-authn":
          apiKey:
+           secretRef: # Add this!
+             name: api-key-regular-user
+             namespace: kuadrant-system # Specify the namespace         
            selector:
              matchLabels:
                app: springboot-flights
